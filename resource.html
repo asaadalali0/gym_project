@@ -5,29 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reviews Page</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="resource.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- <link rel="stylesheet" href="resource.css"> -->
+    <link rel="stylesheet" href="./css/header.css">
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .resource-table {
+            margin-top: 20px;
+        }
+
+        .resource-table th,
+        .resource-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .resource-table th {
+            background-color: #f2f2f2;
+        }
+
+        .resource-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .resource-table tr:hover {
+            background-color: #ddd;
+        }
+    </style>
     <!-- Font Awesome Library -->
     <script src="https://kit.fontawesome.com/0c82b77df5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- Start Header -->
-    <!-- <div class="header" id="header">
-        <div class="container">
-            <a href="index.html" class="logo">GYM </a>
-            <ul class="main-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="review.html">Reviews</a></li>
-                <li><a href="resource.html">Resources</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
-    </div> -->
     <div id="header-placeholder"></div>
     <!-- End Header -->
 
@@ -38,7 +51,7 @@
                 <p>This page provides a list of websites that offer similar services to ours. We've curated these
                     resources to help you find additional support and information related to our industry.</p>
             </div>
-            <div class="resource-table">
+            <div class="resource-table table-responsive">
                 <table class="table table-striped">
                     <thead>
                         <tr>

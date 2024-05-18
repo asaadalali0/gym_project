@@ -1,0 +1,124 @@
+/* .services {
+  padding: 50px 0;
+}
+.services-home {
+  background-color: var(--section-background);
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service-card {
+  width: calc(25% - 20px);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  background-color: #5bbcff; 
+  color: #fff;
+}
+
+.service-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  max-height: 130px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.service-card:hover h3 {
+  color: #fff;
+}
+.service-card p {
+  font-size: 16px;
+  color: #666;
+}
+.service-card:hover p {
+  color: #fff;
+} */
+.services {
+  /* background-color: #f4f4f4; */
+  padding: 50px 0;
+}
+.services-home {
+  background-color: var(--section-background);
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service-card {
+  width: calc(25% - 20px);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  background-color: #5bbcff; /* New background color on hover */
+  color: #fff;
+}
+
+.service-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  max-height: 130px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.service-card:hover h3 {
+  color: #fff;
+}
+.service-card p {
+  font-size: 16px;
+  color: #666;
+}
+.service-card:hover p {
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .service-card {
+    width: calc(33.333% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .service-card {
+    width: calc(100% - 20px);
+  }
+}

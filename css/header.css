@@ -1,0 +1,108 @@
+/* header.css */
+
+/* Default styles */
+.header {
+    background-color: white;
+    position: relative;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.header .logo {
+    color: var(--main-color);
+    font-size: 26px;
+    font-weight: bold;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2; /* Ensures the logo is on top */
+}
+
+.header .menu-toggle {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px; /* Position the button on the right side */
+    z-index: 1; /* Ensures the button is behind the logo */
+}
+
+.header .main-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header .main-nav > li > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    color: black;
+    padding: 0 30px;
+    font-size: 18px;
+    transition: var(--main-transition);
+}
+
+.header .main-nav > li > a:hover {
+    color: var(--main-color);
+    background-color: #fafafa;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .header .container {
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        width: 100%;
+    }
+    
+    .header .menu-toggle {
+        display: block;
+    }
+    
+    .header .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .header .main-nav.active {
+        display: flex;
+    }
+    
+    .header .main-nav.active > .menu-toggle {
+        top: 12px;
+        font-size: 12px; /* Adjust the font size of the menu-toggle when active */
+    }
+    
+    .header .main-nav > li > a {
+        padding: 10px;
+        font-size: 14px;
+        height: auto;
+    }
+
+    /* Adjust position of date and time */
+    #dateTime {
+        margin-right: 123px;
+
+    }
+}

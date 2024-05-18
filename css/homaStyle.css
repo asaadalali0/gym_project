@@ -1,0 +1,109 @@
+
+/* Start Landing Section */
+.landing {
+  background: linear-gradient(to bottom, #3f3f3f, #101010);
+  background-size: cover;
+  height: calc(100vh - 64px);
+  position: relative;
+  color: #fff;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+}
+
+.landing .intro-text {
+  padding: 0 16px;
+  text-align: center;
+}
+
+.landing .intro-text h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 40px; /* Decrease font size for smaller screens */
+  color: var(--main-color);
+}
+
+.image-home img {
+  width: 400px; /* Decrease image width for smaller screens */
+}
+
+.landing .intro-text p {
+  font-size: 16px; /* Decrease font size for smaller screens */
+  line-height: 1.6; /* Adjust line height for better readability */
+}
+
+@media (max-width: 767px) {
+  .landing{
+    flex-direction: column;
+    height: calc(100vh - 500px);
+
+  }
+  .image-home img {
+    display: none; /* Hide image on screens smaller than 768px */
+  }
+
+  .landing .intro-text h1 {
+    font-size: 32px; /* Further decrease font size for smaller screens */
+  }
+
+  .landing .intro-text p {
+    font-size: 14px; /* Further decrease font size for smaller screens */
+  }
+}
+/* End Landing Section */
+.gallery {
+  padding-top: 50px;
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+.gallery .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+.gallery-section {
+  padding: 4px;
+  background-color: white;
+  border: 1px solid #3f3f3f;
+}
+.image-gallery {
+  width: 100%;
+  min-height: 250px;
+
+}
+.section {
+  background-color: var(--section-background);
+  padding: 40px 0;
+}
+
+.container-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.section-image {
+  flex: 1;
+  margin: 0;
+  border: 0.5px solid #ccc;
+  padding: 5px;
+  background-color: white;
+}
+
+.section-image img {
+  max-width: 100%;
+  height: auto;
+}

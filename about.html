@@ -6,24 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/header.css">
+
     <!-- Font Awesome Library -->
     <script src="https://kit.fontawesome.com/0c82b77df5.js" crossorigin="anonymous"></script>
     <style>
         .team-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center; /* Center the team cards horizontally */
         }
 
         .team-card {
-            width: calc(50% - 50px);
+            width: calc(50% - 20px); /* Adjust card width */
             margin-bottom: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             padding: 20px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-
         }
 
         .team-card img {
@@ -31,26 +34,21 @@
             height: 320px;
             border-radius: 6px;
             margin-bottom: 10px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            .team-card {
+                width: calc(100% - 20px); /* Full width minus margins */
+                margin-left: 10px;
+                margin-right: 10px;
+            }
         }
     </style>
 </head>
 
 <body>
     <!-- Start Header -->
-    <!-- <div class="header" id="header">
-        <div class="container">
-            <a href="#" class="logo">GYM </a>
-            <ul class="main-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="review.html">Reviews</a></li>
-                <li><a href="resource.html">Resources</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-
-            </ul>
-        </div>
-    </div> -->
     <div id="header-placeholder"></div>
 
     <!-- End Header -->
@@ -80,22 +78,20 @@
                 <div class="team-card">
                     <img src="mypic.png" alt="Team Member 1">
                     <h4>Asaad Alali</h4>
-                    <p>Im professioal at gym and i have PT certificate graduate from ASU My major cyber security</p>
+                    <p>I'm professional at gym and I have a PT certificate, graduated from ASU. My major is cyber security.</p>
                 </div>
                 <!-- Team Member 2 -->
                 <div class="team-card">
-                    <img src="yousef .png" alt="Team Member 2">
-                    <h4>yousef khalaileh </h4>
-                    <p>Im am the owner of the gym, i own three other gyms , im in this career for a very  long time i took the profationality from my dad .</p>
+                    <img src="yousef.png" alt="Team Member 2">
+                    <h4>Yousef Khalaileh</h4>
+                    <p>I'm the owner of the gym. I own three other gyms. I've been in this career for a very long time. I took the professionalism from my dad.</p>
                 </div>
             </div>
         </div>
-
     </div>
 
     <!-- Team -->
     <script src="./js/loadHeader.js"></script>
-
 
 </body>
 

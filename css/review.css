@@ -1,0 +1,22 @@
+.review-data-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  margin-bottom: 30px;
+}
+.review-data {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: var(--section-background);
+  padding: 4px;
+}
+.rate .filled {
+  color: #ffc107;
+}
+.review-data-title {
+  margin: 4px;
+}
+.review-data-review {
+  font-size: 14px;
+  line-height: 22px;
+}
