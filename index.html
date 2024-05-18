@@ -1,0 +1,155 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="homaStyle.css">
+    <link rel="stylesheet" href="services.css">
+    <!-- Font Awesome Library -->
+    <script src="https://kit.fontawesome.com/0c82b77df5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Start Header -->
+    <!-- <div class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">Gym</a>
+            <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="review.html">Reviews</a></li>
+                <li><a href="resource.html">Resources</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+
+            </ul>
+        </div>
+    </div> -->
+    <div id="header-placeholder"></div>
+
+    <div class="landing">
+        <div class="intro-text">
+            <h1>Hello There</h1>
+            <p>Remember, every step you take in the gym is a step closer to your goals! Keep pushing yourself, stay consistent, and you'll achieve greatness </p>
+            
+        </div>
+        <div class="image-home">
+            <img src="person-removebg.png" alt="person" />
+
+        </div>
+    </div>
+    <!-- End Header -->
+        <!-- Start Services -->
+        <div class="services services-home">
+            <h2 class="main-title">Services</h2>
+            <div class="container">
+                <div class="service-card">
+                    <img src="services_image/services1.jpg" alt="Service 1">
+                    <h3>Personal Training</h3>
+                    <p>Get personalized training sessions with our certified trainers to reach your fitness goals.</p>
+                </div>
+                <div class="service-card">
+                    <img src="services_image/services2.jpg" alt="Service 2">
+                    <h3>Group Classes</h3>
+                    <p>Join our group classes and enjoy a variety of workouts such as yoga, spinning, and HIIT.</p>
+                </div>
+                <div class="service-card">
+                    <img src="/services_image/services3.jpg" alt="Service 3">
+                    <h3>Cardio Equipment</h3>
+                    <p>Access our top-of-the-line cardio machines to improve your cardiovascular health.</p>
+                </div>
+                <div class="service-card">
+                    <img src="person.png" alt="Service 4">
+                    <h3>Strength Training</h3>
+                    <p>Build muscle and strength with our range of free weights and resistance machines.</p>
+                </div>
+            </div>
+    
+    
+        </div>
+        <!-- End Services -->
+    <!-- Start GALLERY -->
+
+    <div class="gallery">
+        <h2 class="main-title">GALLERY</h2>
+        <div class="container">
+            <div class="gallery-section">
+                <img src="Gallery/gallery 1.jpg" alt="person" class="image-gallery" />
+            </div>
+            <div class="gallery-section">
+                <img src="Gallery/gallery 2.jpg" alt="person" class="image-gallery" />
+            </div>
+            <div class="gallery-section">
+                <img src="Gallery/gallery 3.jpg" alt="person" class="image-gallery" />
+            </div>
+            <div class="gallery-section">
+                <img src="Gallery/gallery 4.jpg" alt="person" class="image-gallery" />
+            </div>
+            <div class="gallery-section">
+                <img src="Gallery/gallery 5.jpg" alt="person" class="image-gallery" />
+            </div>
+            <div class="gallery-section">
+                <img src="person.png" alt="person" class="image-gallery" />
+            </div>
+        </div>
+    </div>
+    <!-- End GALLERY -->
+
+    <!-- Start New Section -->
+    <div class="section">
+        <div class="container-section">
+            <div class="section-content">
+                <div class="section-text">
+                    <h2>some motivation for yourself</h2>
+                    <p>magine the feeling of accomplishment after completing a challenging workout 
+                        That feeling of pride and satisfaction is waiting for you</p>
+                </div>
+                <div class="section-image">
+                    <img src="person_home.jpg" alt="Image">
+                </div>
+            </div>
+            <div class="section-content" style="margin-top: 50px;">
+                <div class="section-image">
+                    <img src="person_home.jpg" alt="Image">
+                </div>
+                <div class="section-text">
+                    <h2>keep your eyes on the target</h2>
+                    <p>Think about your goals and how each rep, each set, and each session is bringing you closer to achieving them 
+                        Every effort counts</p>
+                </div>
+
+            </div>
+            <div class="section-content" style="margin-top: 50px;">
+
+                <div class="section-text">
+                    <h2>focus on your goals</h2>
+                    <p>Remember that every time you push yourself beyond your comfort zone, you're not just building your body
+                         you're also building mental toughness and resilience</p>
+                </div>
+                <div class="section-image">
+                    <img src="person_home.jpg" alt="Image">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="./js/loadHeader.js"></script>
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const formattedDateTime = now.toLocaleString(); // This formats the date and time according to the user's locale
+            document.getElementById('dateTime').textContent = formattedDateTime;
+        }
+
+        // Update the date and time initially
+        updateDateTime();
+        // Update the date and time every second
+        setInterval(updateDateTime, 1000);
+    </script>
+    <!-- End New Section -->
+</body>
+
+</html>

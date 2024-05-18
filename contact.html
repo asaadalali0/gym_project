@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <script src="https://kit.fontawesome.com/0c82b77df5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <div class="contact-us"
+        style="background-image: url('https://t4.ftcdn.net/jpg/01/30/39/43/360_F_130394395_7FSUsAaybwtBe3hBXx9xcffIYkWEQbaO.jpg'); background-size: cover; background-position: center; padding: 80px 0;">
+        <div class="container contact-container">
+            <div class="contact-form">
+                <h2 style="color: white;">Contact Us</h2>
+                <p style="margin-right: 10px;color: white;">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Tenetur quisquam, fugiat, suscipit eligendi ex unde cupiditate blanditiis hic nam earum
+                    dolor adipisci aut non dicta reiciendis exercitationem voluptate ad itaque?</p>
+                <p style="color: white;">In the meantime, you can reach us via:</p>
+                <ul class="contact-info">
+                    <li style="color: white;"><i class="fas fa-phone"></i>Phone: +962797792364</li>
+                    <li style="color: white;"><i class="fab fa-instagram"></i>Instagram: <a style="color:#0056b3"
+                            href="https://www.instagram.com/9xkb/">Your Instagram Page</a></li>
+                    <li style="color: white;"><i class="fab fa-whatsapp"></i>WhatsApp: <a style="color:#0056b3"
+                            href="https://wa.me/+962797792364">Send a message</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-container">
+                <div class="contact-or">
+                    <h3 style="color: #fff;font-weight: bold;" class="">OR</h3>
+                    <p style="color: #fff;font-weight: bold;">Please Fill to form below and We will get back to you
+                        soon. </p>
+                </div>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                        <span class="error-message hidden" id="nameError">Please enter your name.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" >
+                        <span class="error-message hidden" id="emailError">Please enter a valid email address.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" >
+                        <span class="error-message hidden" id="phoneError">Please enter a valid phone number.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" ></textarea>
+                        <span class="error-message hidden" id="messageError">Please enter your message.</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <div id="confirmationMessage" class="hidden">
+                    <p>Message sent successfully!</p>
+                    <button id="showFormButton" class="btn btn-secondary">Show Form Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/loadHeader.js"></script>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Perform validation
+            var isValid = true;
+            var inputs = document.querySelectorAll('#contactForm input, #contactForm textarea');
+            inputs.forEach(function (input) {
+                var errorSpan = document.getElementById(input.id + 'Error');
+                errorSpan.classList.add('hidden'); // Hide error message
+
+                if (!input.value.trim()) {
+                    errorSpan.classList.remove('hidden'); // Show error message
+                    isValid = false;
+                }
+
+                // Specific validation for email
+                if (input.type === 'email' && !validateEmail(input.value)) {
+                    errorSpan.textContent = 'Please enter a valid email address.';
+                    errorSpan.classList.remove('hidden'); // Show error message
+                    isValid = false;
+                }
+
+                // Specific validation for phone (basic pattern)
+                if (input.type === 'tel' && !validatePhone(input.value)) {
+                    errorSpan.textContent = 'Please enter a valid phone number.';
+                    errorSpan.classList.remove('hidden'); // Show error message
+                    isValid = false;
+                }
+            });
+
+            if (isValid) {
+                // Hide the form and show the confirmation message
+                document.getElementById('contactForm').classList.add('hidden');
+                document.getElementById('confirmationMessage').classList.remove('hidden');
+            }
+        });
+
+        document.getElementById('showFormButton').addEventListener('click', function () {
+            // Reset the form
+            document.getElementById('contactForm').reset();
+            // Hide all error messages
+            var errorMessages = document.querySelectorAll('.error-message');
+            errorMessages.forEach(function (errorMessage) {
+                errorMessage.classList.add('hidden');
+            });
+            // Show the form and hide the confirmation message
+            document.getElementById('contactForm').classList.remove('hidden');
+            document.getElementById('confirmationMessage').classList.add('hidden');
+        });
+
+        function validateEmail(email) {
+            // Basic email validation regex
+            var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function validatePhone(phone) {
+            // Basic phone number validation regex (adjust as needed)
+            var re = /^\d{10,15}$/;
+            return re.test(phone);
+        }
+    </script>
+</body>
+
+</html>
